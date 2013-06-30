@@ -5,7 +5,7 @@ clean:
 
 test:
 	python -munittest problem001 problem002 fibonacci factors problem003 \
-	    reverseint palindrome problem004 gcd problem005
+	    reverseint palindrome problem004 gcd problem005 primes
 
 problem001.out: problem001.py
 	python problem001.py > problem001.out
