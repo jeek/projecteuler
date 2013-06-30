@@ -1,7 +1,9 @@
 """
-2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+2520 is the smallest number that can be divided by each of the numbers from 1
+to 10 without any remainder.
 
-What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+What is the smallest positive number that is evenly divisible by all of the
+numbers from 1 to 20?
 """
 
 import unittest
@@ -18,15 +20,18 @@ class TestProblem005(unittest.TestCase):
         """The test itself."""
         # pylint: disable=W0201
         self.start = time()
-        self.assertEqual(problem005(), 232792560, "Answer to Problem #5 is wrong.")
+        self.assertEqual(problem005(), 232792560,
+            "Answer to Problem #5 is wrong.")
         self.stop = time()
-        self.assertLess(self.stop - self.start, 60, "Problem #5 took too long.")
+        self.assertLess(self.stop - self.start, 60,
+            "Problem #5 took too long.")
 
 class TestCaseProblem005(unittest.TestCase):
     """Test the example for problem #5."""
     def runTest(self):
         """The test itself."""
-        self.assertEqual(problem005(range(1, 11)), 2520, "#5 Test Case is wrong.")
+        self.assertEqual(problem005(range(1, 11)), 2520,
+            "#5 Test Case is wrong.")
 
 if __name__ == "__main__":
     start = time()
