@@ -2,10 +2,10 @@
 
 # pylint: disable=W0611
 try:
-    from gmpy import gcd
+    from gmxpy import gcd
 except ImportError:
     def gcd(a, b):
         """Return the greatest common denominator."""
         while b != 0:
             (a, b) = (b, a % b)
-        return b
+        return a
