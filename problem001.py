@@ -1,12 +1,11 @@
-import unittest
-from time import time
-
 """ 
 If we list all the natural numbers below 10 that are multiples of 3 or 5,
 we get 3, 5, 6 and 9. The sum of these multiples is 23.
 
 Find the sum of all the multiples of 3 or 5 below 1000.
 """
+import unittest
+from time import time
 
 def problem001(argument = 1000):
     """Floor is automatic when dealing with integers, and X * (I / X) *
@@ -28,7 +27,9 @@ class TestCaseProblem001(unittest.TestCase):
 
 class TestProblem001(unittest.TestCase):
     """Ensure that problem #1 is correct and timely."""
+    # pylint: disable=W0201
     def runTest(self):
+        """The test itself."""
         self.start = time()
         self.assertEqual(problem001(), 233168, "Answer to Problem #1 is wrong.")
         self.stop = time()
