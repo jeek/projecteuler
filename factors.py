@@ -1,7 +1,7 @@
 """Factor an integer into primes."""
 
 import unittest
-from gmpy import is_prime
+from primes import is_prime
 
 def factors(argument):
     """Factor an integer into a list of primes."""

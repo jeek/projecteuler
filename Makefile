@@ -1,7 +1,7 @@
 all:
 
 test:
-	python -munittest factors
+	python -munittest primes factors
 
 clean:
 	rm -rf *.pyc *~ *.out
