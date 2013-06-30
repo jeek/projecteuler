@@ -13,7 +13,7 @@ def problem003(argument = 600851475143):
 
 class TestProblem003(unittest.TestCase):
     """Unit test for problem #3 to confirm correct answer."""
-    # pylint: disable=W0231
+    # pylint: disable=W0201
 
     def runTest(self):
         """The test itself."""
