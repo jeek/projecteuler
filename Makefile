@@ -1,11 +1,12 @@
-all: problem001.out problem002.out problem003.out problem004.out problem005.out problem006.out
+all: problem001.out problem002.out problem003.out problem004.out problem005.out problem006.out problem007.out
 
 clean:
 	rm -rf *.out *.pyc *~
 
 test:
 	python -munittest problem001 problem002 fibonacci factors problem003 \
-	    reverseint palindrome problem004 gcd problem005 primes problem006
+	    reverseint palindrome problem004 gcd problem005 primes problem006 \
+	    problem007
 
 problem001.out: problem001.py
 	python problem001.py > problem001.out
@@ -25,3 +26,5 @@ problem005.out: problem005.py
 problem006.out: problem006.py
 	python problem006.py > problem006.out
 
+problem007.out: primes.py problem007.py
+	python problem007.py > problem007.out
