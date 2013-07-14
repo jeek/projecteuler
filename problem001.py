@@ -11,9 +11,9 @@ def problem001(argument = 1000):
     """Floor is automatic when dealing with integers, and X * (I / X) *
     (I / X + 1) / 2 is how many multiples of X are below I."""
     argument -= 1
-    return (3 * (argument / 3) * (argument / 3 + 1) / 2 + 5 * (argument / 5) \
-        * (argument / 5 + 1) / 2 - 15 * (argument / 15) * (argument / 15 + 1) \
-        / 2)
+    return (3 * (argument / 3) * (argument / 3 + 1) / 2 \
+          + 5 * (argument / 5) * (argument / 5 + 1) / 2 \
+          - 15 * (argument / 15) * (argument / 15 + 1) / 2)
 
 def problem001alternate(argument = 1000):
     """A simple brute-forcing of the searchspace."""
