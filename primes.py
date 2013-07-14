@@ -12,3 +12,10 @@ except ImportError:
                 return False
         return True
 
+def primegen():
+    yield 2
+    i = 3
+    while True:
+        if is_prime(i):
+            yield i
+        i += 2
