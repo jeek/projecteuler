@@ -6,6 +6,7 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 """
 import unittest
 from time import time
+from palindrome import is_palindrome
 
 def problem004(digits = 3):
     """Brute force the search space."""
@@ -14,8 +15,8 @@ def problem004(digits = 3):
         for j in range(i, 10 ** digits):
             answers.add(i * j)
     for i in sorted(list(answers), key = lambda score: -score):
-        if str(i) == str(i)[::-1]:
-            return int(i)
+        if is_palindrome(i):
+            return i
 
 class TestProblem004(unittest.TestCase):
     """Test the solution to problem #4."""
