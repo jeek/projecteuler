@@ -5,6 +5,8 @@ try:
 except ImportError:
     def is_prime(argument):
         """Rudimentary factor checking."""
+        if argument == 2:
+            return True
         if argument % 2 == 0:
             return False
         for i in xrange(3, int(argument ** .5 + 1), 2):
