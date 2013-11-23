@@ -2,7 +2,7 @@
 
 # pylint: disable=W0611
 try:
-    from gmxpy import gcd
+    from gmpy import gcd
 except ImportError:
     def gcd(a, b):
         """Return the greatest common denominator."""
