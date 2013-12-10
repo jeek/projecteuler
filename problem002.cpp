@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void problem002(void) {
+int main() {
     int a = 0;
     int b = 1;
     int c = 1;

@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-void problem009() {
+int main() {
     int a, b, c;
     for (a = 1 ; a <= 1000 ; a++) {
         for (b = a + 1 ; a + b < 1000 ; b++) {

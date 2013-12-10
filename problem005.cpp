@@ -1,8 +1,13 @@
+#include <cstdlib>
 #include <iostream>
 #include "lcm.h"
 using namespace std;
 
-void problem005(int upperlimit = 20) {
+int main (int argc, char* argv[]) {
+    int upperlimit = 20;
+    if (argc == 2) {
+        upperlimit = atoi(argv[1]);
+    }
     long long i = 1;
     long long answer = 1;
     while (i <= upperlimit) {

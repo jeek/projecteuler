@@ -1,8 +1,13 @@
+#include <cstdlib>
 #include <iostream>
 #include "problem007.h"
 using namespace std;
 
-void problem007(int upperlimit = 10001) {
+int main(int argc, char* argv[]) {
+    int upperlimit = 10001;
+    if (argc == 2) {
+        upperlimit = atoi(argv[1]);
+    }
     long long primes[upperlimit];
     int i = 0, j = 5, k;
     for (i = 0 ; i < upperlimit ; i++) {

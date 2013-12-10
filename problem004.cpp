@@ -1,8 +1,13 @@
+#include <cstdlib>
 #include <iostream>
 #include "ispalindrome.h"
 using namespace std;
 
-void problem004(int size = 3) {
+int main(int argc, char* argv[]) {
+    int size = 3;
+    if (argc == 2) {
+        size = atoi(argv[1]);
+    }
     int i, j;
     int start = 1, end = 1;
     for (i = 1; i < size ; i++) {

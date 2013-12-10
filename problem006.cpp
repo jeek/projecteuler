@@ -1,9 +1,13 @@
+#include <cstdlib>
 #include "problem006.h"
-#include "abs.h"
 #include <iostream>
 using namespace std;
 
-void problem006(int upperlimit = 100) {
+int main(int argc, char* argv[]) {
+    int upperlimit = 100;
+    if (argc == 2) {
+        upperlimit = atoi(argv[1]);
+    }
     long long squareofsums = 0;
     long long sumofsquares = 0;
     long long i = 1;
