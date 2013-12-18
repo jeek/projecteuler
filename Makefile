@@ -108,7 +108,7 @@ problem010test.out: problem010
 	./problem010 10 > problem010test.out
 
 problem011.out: problem011
-	./problem011 11 > problem011.out
+	./problem011 > problem011.out
 
 problem012.out: problem012
 	./problem012 > problem012.out
