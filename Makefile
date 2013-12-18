@@ -1,7 +1,6 @@
 export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
 
-all: problem001 problem002 problem003 problem004 problem005 problem006 problem007 problem008 problem009 problem010 problem011 problem012 problem013 problem014 problem015
-
+all: problem001 problem002 problem003 problem004 problem005 problem006 problem007 problem008 problem009 problem010 problem011 problem012 problem013 problem014 problem015 problem016
 problem001: problem001.cpp
 	g++ -o problem001 problem001.cpp
 
@@ -55,6 +54,9 @@ problem014: problem014.cpp
 
 problem015: problem015.cpp
 	g++ -o problem015 problem015.cpp -lgmpxx -lgmp
+
+problem016: problem016.cpp
+	g++ -o problem016 problem016.cpp -lgmpxx -lgmp
 
 ispalindrome.o: ispalindrome.cpp ispalindrome.h
 	g++ -c -Wall -Werror -fpic ispalindrome.cpp
@@ -137,13 +139,19 @@ problem015test.out: problem015
 problem015.out: problem015
 	./problem015 > problem015.out
 
+problem016test.out: problem016
+	./problem016 15 > problem016test.out
+
+problem016.out: problem016
+	./problem016 > problem016.out
+
 test: problem001test.out problem001.out problem002.out \
 	problem003test.out problem003.out problem004test.out problem004.out \
 	problem005test.out problem005.out problem006test.out problem006.out \
 	problem007test.out problem007.out problem008.out problem009.out \
 	problem010test.out problem010.out problem011.out problem012test.out \
 	problem012.out problem013.out problem014.out problem015test.out \
-	problem015.out
+	problem015.out problem016test.out problem016.out
 	@ echo 001: 23 | diff problem001test.out -
 	@ echo 001: 233168 | diff problem001.out -
 	@ echo 002: 4613732 | diff problem002.out -
@@ -168,5 +176,7 @@ test: problem001test.out problem001.out problem002.out \
 	@ echo 014: 837799 | diff problem014.out -
 	@ echo 015: 6 | diff problem015test.out -
 	@ echo 015: 137846528820 | diff problem015.out -
+	@ echo 016: 26 | diff problem016test.out -
+	@ echo 016: 1366 | diff problem016.out -
 clean:
 	rm -rf *~ problem??? problem*.out *.o *.so
