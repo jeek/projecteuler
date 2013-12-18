@@ -44,6 +44,9 @@ problem010: problem010.cpp
 problem011: problem011.cpp
 	g++ -o problem011 problem011.cpp
 
+problem012: problem012.cpp
+	g++ -o problem012 problem012.cpp
+
 ispalindrome.o: ispalindrome.cpp ispalindrome.h
 	g++ -c -Wall -Werror -fpic ispalindrome.cpp
 
@@ -107,11 +110,18 @@ problem010test.out: problem010
 problem011.out: problem011
 	./problem011 11 > problem011.out
 
+problem012.out: problem012
+	./problem012 > problem012.out
+
+problem012test.out: problem012
+	./problem012 5 > problem012test.out
+
 test: problem001test.out problem001.out problem002.out \
 	problem003test.out problem003.out problem004test.out problem004.out \
 	problem005test.out problem005.out problem006test.out problem006.out \
 	problem007test.out problem007.out problem008.out problem009.out \
-	problem010test.out problem010.out problem011.out
+	problem010test.out problem010.out problem011.out problem012test.out \
+	problem012.out
 	@ echo 001: 23 | diff problem001test.out -
 	@ echo 001: 233168 | diff problem001.out -
 	@ echo 002: 4613732 | diff problem002.out -
@@ -130,6 +140,7 @@ test: problem001test.out problem001.out problem002.out \
 	@ echo 010: 17 | diff problem010test.out -
 	@ echo 010: 142913828922 | diff problem010.out -
 	@ echo 011: 70600674 | diff problem011.out -
-
+	@ echo 012: 28 | diff problem012test.out -
+	@ echo 012: 76576500 | diff problem012.out -
 clean:
 	rm -rf *~ problem??? problem*.out *.o *.so
