@@ -105,7 +105,7 @@ problem010test.out: problem010
 	./problem010 10 > problem010test.out
 
 problem011.out: problem011
-	./problem011 11 > problem011.out
+	./problem011 > problem011.out
 
 test: problem001test.out problem001.out problem002.out \
 	problem003test.out problem003.out problem004test.out problem004.out \
