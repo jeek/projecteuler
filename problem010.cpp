@@ -1,4 +1,3 @@
-#include "problem010.h"
 #include <iostream>
 #include <cstdlib>
 using namespace std;
