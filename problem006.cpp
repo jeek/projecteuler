@@ -1,5 +1,4 @@
 #include <cstdlib>
-#include "problem006.h"
 #include <iostream>
 using namespace std;
 

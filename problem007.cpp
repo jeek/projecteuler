@@ -1,6 +1,5 @@
 #include <cstdlib>
 #include <iostream>
-#include "problem007.h"
 using namespace std;
 
 int main(int argc, char* argv[]) {
