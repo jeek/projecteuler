@@ -1,4 +1,3 @@
-#include "problem008.h"
 #include <iostream>
 using namespace std;
 
