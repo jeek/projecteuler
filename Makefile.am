@@ -1,5 +1,5 @@
 bin_PROGRAMS = problem001 problem002 problem003 problem004 problem005 \
-    problem006 problem007 problem008
+    problem006 problem007 problem008 problem009
 lib_LTLIBRARIES = libispalindrome.la liblcm.la libgcd.la
 libispalindrome_la_SOURCES = ispalindrome.cpp
 liblcm_la_SOURCES = lcm.cpp
@@ -36,6 +36,9 @@ problem007_LDADD = $(INTI_LIBS)
 problem008_SOURCES = problem008.cpp
 problem008_LDADD = $(INTI_LIBS)
 
+problem009_SOURCES = problem009.cpp
+problem009_LDADD = $(INTI_LIBS)
+
 TESTS = tests/problem001test.t tests/problem001.t \
         tests/problem002.t \
         tests/problem003test.t tests/problem003.t \
@@ -43,4 +46,5 @@ TESTS = tests/problem001test.t tests/problem001.t \
         tests/problem005test.t tests/problem005.t \
         tests/problem006test.t tests/problem006.t \
         tests/problem007test.t tests/problem007.t \
-        tests/problem008.t
+        tests/problem008.t \
+        tests/problem009.t
