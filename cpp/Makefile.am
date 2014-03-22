@@ -51,16 +51,16 @@ problem012_SOURCES = problem012.cpp
 problem012_LDADD = $(INTI_LIBS)
 
 problem013_SOURCES = problem013.cpp
-problem013_LDADD = $(INTI_LIBS) -lgmpxx
+problem013_LDADD = $(INTI_LIBS) -lgmp -lgmpxx
 
 problem014_SOURCES = problem014.cpp
 problem014_LDADD = $(INTI_LIBS)
 
 problem015_SOURCES = problem015.cpp
-problem015_LDADD = $(INTI_LIBS) -lgmpxx
+problem015_LDADD = $(INTI_LIBS) -lgmp -lgmpxx
 
 problem016_SOURCES = problem016.cpp
-problem016_LDADD = $(INTI_LIBS) -lgmpxx
+problem016_LDADD = $(INTI_LIBS) -lgmp -lgmpxx
 
 problem017_SOURCES = problem017.cpp
 problem017_LDADD = $(INTI_LIBS)
@@ -72,7 +72,7 @@ problem019_SOURCES = problem019.cpp
 problem019_LDADD = $(INTI_LIBS)
 
 problem020_SOURCES = problem020.cpp
-problem020_LDADD = $(INTI_LIBS) -lgmpxx
+problem020_LDADD = $(INTI_LIBS) -lgmp -lgmpxx
 
 TESTS = tests/problem001test.t tests/problem001.t \
         tests/problem002.t \
