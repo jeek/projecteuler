@@ -1,0 +1,1 @@
+print sum(i for i in xrange(10000) if i != sum(l for l in xrange(1, i) if i % l == 0) and i == sum(k for k in xrange(1, sum(j for j in xrange(1, i) if i % j == 0)) if sum(j for j in xrange(1, i) if i % j == 0) % k == 0))
