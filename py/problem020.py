@@ -31,7 +31,7 @@ class TestProblem020(unittest.TestCase):
         self.assertEqual(problem020(), 648, "Answer to Problem #20 is wrong.")
         self.stop = time()
         self.assertLess(self.stop - self.start, 60,
-            "Problem #1 took over 60 seconds.")
+            "Problem #20 took over 60 seconds.")
 
 
 if __name__ == "__main__":
