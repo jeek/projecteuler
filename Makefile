@@ -17,5 +17,5 @@ check:	cpp/Makefile
 
 test:	check
 
-distclean:
+distclean:	cpp/Makefile
 	cd cpp;make distclean
