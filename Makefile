@@ -12,7 +12,7 @@ clean:	cpp/Makefile
 	cd cpp;rm -rf *.cache configure Makefile.in missing *.m4 m4 config.guess config.sub depcomp install-sh ltmain.sh config.h.in configure.scan *.log
 
 check:	cpp/Makefile
-	cd cpp;make test
+	cd cpp;make check
 	cd py;make test
 
 test:	check
