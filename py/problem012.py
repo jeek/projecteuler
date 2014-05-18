@@ -24,15 +24,15 @@ from time import time
 import unittest
 
 class TestProblem012(unittest.TestCase):
-     """Verify that problem #12 is correct and timely."""
-     # pylint: disable=W0201
-     def runTest(self):
-         """The test itself."""
-         self.start = time()
-         self.assertEqual(problem012(), 76576500, "Problem #12 is wrong.")
-         self.stop = time()
-         self.assertLess(self.stop - self.start, 60,
-             """Problem #12 takes too long.""")
+    """Verify that problem #12 is correct and timely."""
+    # pylint: disable=W0201
+    def runTest(self):
+        """The test itself."""
+        self.start = time()
+        self.assertEqual(problem012(), 76576500, "Problem #12 is wrong.")
+        self.stop = time()
+        self.assertLess(self.stop - self.start, 60,
+            """Problem #12 takes too long.""")
 
 def problem012():
     i = 0
@@ -45,4 +45,4 @@ def problem012():
 if __name__ == "__main__":
     start = time()
     answer = problem012()
-    print 12, answer, time() - start
+    print(12, answer, time() - start)

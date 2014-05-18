@@ -37,4 +37,4 @@ class TestProblem020(unittest.TestCase):
 if __name__ == "__main__":
     start = time()
     answer = problem020()
-    print 20, (time() - start), answer
+    print(20, (time() - start), answer)

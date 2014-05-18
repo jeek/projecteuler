@@ -50,4 +50,4 @@ class TestProblem008(unittest.TestCase):
 if __name__ == "__main__":
     start = time()
     answer = problem008()
-    print 8, (time() - start), answer
+    print(8, (time() - start), answer)

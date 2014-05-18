@@ -36,4 +36,4 @@ class TestCaseProblem005(unittest.TestCase):
 if __name__ == "__main__":
     start = time()
     answer = problem005()
-    print 5, (time() - start), answer
+    print(5, (time() - start), answer)
