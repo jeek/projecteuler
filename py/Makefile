@@ -4,7 +4,7 @@ clean:
 	rm -rf *.out *.pyc *~
 
 test:
-	ls *.py|sed 's/.py\$//'|xargs python -munittest
+	ls *.py|sed 's/.py//'|xargs python -munittest
 
 problem001.out: problem001.py
 	python problem001.py > problem001.out
