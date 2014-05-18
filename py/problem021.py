@@ -9,11 +9,11 @@ Evaluate the sum of all the amicable numbers under 10000.
 """
 
 import unittest
-from isabundant import isabundant
+from amicable import isamicablepair
 from time import time
 
 def problem021(argument = 10000):
-    return sum(i for i in xrange(argument) if isabundant(i))
+    return sum(i for i in xrange(argument) if isamicablepair(i))
 
 class TestProblem021(unittest.TestCase):
     """Ensure that problem #21 is correct and timely."""
