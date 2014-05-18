@@ -9,6 +9,10 @@ numbers from 1 to 20?
 import unittest
 from time import time
 from gcd import gcd
+try:
+    reduce
+except NameError:
+    from functools import reduce
 
 def problem005(argument = range(1, 21)):
     """Return the lcm of 1 through 20."""
