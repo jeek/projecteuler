@@ -1,0 +1,1 @@
+rm -rf *.cache configure Makefile.in missing *.m4 m4 config.guess config.sub depcomp install-sh ltmain.sh config.h.in configure.scan *.log
