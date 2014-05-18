@@ -12,7 +12,7 @@ def problem007(argument = 10001):
     primes = []
     nextprime = primegen()
     while len(primes) < argument:
-        primes.append(nextprime.next())
+        primes.append(next(nextprime))
     return primes[-1]
 
 class TestProblem007(unittest.TestCase):
