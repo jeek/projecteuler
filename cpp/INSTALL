@@ -1,0 +1,9 @@
+libtoolize
+aclocal
+autoconf
+autoheader
+automake --add-missing
+autoscan
+./configure
+make clean
+make check

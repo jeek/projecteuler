@@ -4,7 +4,6 @@ try:
     xrange
 except NameError:
     xrange = range
-
 try:
     from gmpy import is_prime
 except ImportError:
@@ -18,7 +17,6 @@ except ImportError:
             if argument % i == 0:
                 return False
         return True
-
 
 def primegen():
     yield 2

@@ -11,7 +11,7 @@ from time import time
 from gcd import gcd
 try:
     reduce
-except:
+except NameError:
     from functools import reduce
 
 def problem005(argument = range(1, 21)):
