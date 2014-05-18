@@ -5,6 +5,7 @@ clean:
 
 test:
 	ls *.py|sed "s/.py//"|xargs python -munittest
+	nosetests *.py
 
 problem001.out: problem001.py
 	python problem001.py > problem001.out
