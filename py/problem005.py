@@ -7,6 +7,13 @@ numbers from 1 to 20?
 """
 
 import unittest
+try:
+    unittest.TestCase.assertLess
+except NameError:
+    def assertLess(self, a, b, msg=None):
+        if not a < b:
+            self.fail('%s not less than %s' % (repr(a), repr(b)))
+    unittest.TestCase.assertLess = assertLess
 from time import time
 from gcd import gcd
 try:

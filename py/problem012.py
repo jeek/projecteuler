@@ -22,6 +22,13 @@ divisors?
 """
 from time import time
 import unittest
+try:
+    unittest.TestCase.assertLess
+except NameError:
+    def assertLess(self, a, b, msg=None):
+        if not a < b:
+            self.fail('%s not less than %s' % (repr(a), repr(b)))
+    unittest.TestCase.assertLess = assertLess
 
 class TestProblem012(unittest.TestCase):
     """Verify that problem #12 is correct and timely."""

@@ -7,6 +7,13 @@ For example, 3 ** 2 + 4 ** 2 = 9 + 16 = 25 = 5 ** 2.
 There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 Find the product abc."""
 import unittest
+try:
+    unittest.TestCase.assertLess
+except NameError:
+    def assertLess(self, a, b, msg=None):
+        if not a < b:
+            self.fail('%s not less than %s' % (repr(a), repr(b)))
+    unittest.TestCase.assertLess = assertLess
 from time import time
 
 def problem009():

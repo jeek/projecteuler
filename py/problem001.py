@@ -5,6 +5,13 @@ we get 3, 5, 6 and 9. The sum of these multiples is 23.
 Find the sum of all the multiples of 3 or 5 below 1000.
 """
 import unittest
+try:
+    unittest.TestCase.assertLess
+except NameError:
+    def assertLess(self, a, b, msg=None):
+        if not a < b:
+            self.fail('%s not less than %s' % (repr(a), repr(b)))
+    unittest.TestCase.assertLess = assertLess
 from time import time
 
 def problem001(argument = 1000):

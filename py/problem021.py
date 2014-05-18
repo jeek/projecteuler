@@ -9,6 +9,13 @@ Evaluate the sum of all the amicable numbers under 10000.
 """
 
 import unittest
+try:
+    unittest.TestCase.assertLess
+except NameError:
+    def assertLess(self, a, b, msg=None):
+        if not a < b:
+            self.fail('%s not less than %s' % (repr(a), repr(b)))
+    unittest.TestCase.assertLess = assertLess
 from amicable import isamicablepair
 from time import time
 try:
