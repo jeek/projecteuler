@@ -3,6 +3,10 @@ number."""
 
 import unittest
 from time import time
+try:
+    xrange
+except NameError:
+    xrange = range
 
 number = """73167176531330624919225119674426574742355349194934
 96983520312774506326239578318016984801869478851843
@@ -50,4 +54,4 @@ class TestProblem008(unittest.TestCase):
 if __name__ == "__main__":
     start = time()
     answer = problem008()
-    print 8, (time() - start), answer
+    print(8, (time() - start), answer)

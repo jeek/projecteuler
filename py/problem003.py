@@ -7,6 +7,15 @@ import unittest
 from time import time
 from factors import factors
 
+try:
+    reduce
+except NameError:
+    from functools import reduce
+try:
+    xrange
+except NameError:
+    xrange = range
+
 def problem003(argument = 600851475143):
     """Return the maximum factor."""
     return max(factors(argument))
@@ -31,4 +40,4 @@ class TestCaseProblem003(unittest.TestCase):
 if __name__ == "__main__":
     start = time()
     answer = problem003()
-    print 3, (time() - start), answer
+    print(3, (time() - start), answer)

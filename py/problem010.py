@@ -4,6 +4,10 @@ Find the sum of all the primes below two million."""
 from primes import is_prime
 from time import time
 import unittest
+try:
+    xrange
+except NameError:
+    xrange = range
 
 def problem010(argument = 2000000):
     """Simple summation of matching numbers."""
@@ -30,4 +34,4 @@ class TestCaseProblem010(unittest.TestCase):
 if __name__ == "__main__":
     start = time()
     answer = problem010()
-    print 10, answer, time() - start
+    print(10, answer, time() - start)

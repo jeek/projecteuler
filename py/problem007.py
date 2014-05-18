@@ -12,7 +12,7 @@ def problem007(argument = 10001):
     primes = []
     nextprime = primegen()
     while len(primes) < argument:
-        primes.append(nextprime.next())
+        primes.append(next(nextprime))
     return primes[-1]
 
 class TestProblem007(unittest.TestCase):
@@ -37,4 +37,4 @@ class TestCaseProblem007(unittest.TestCase):
 if __name__ == "__main__":
     start = time()
     answer = problem007()
-    print 7, (time() - start), answer
+    print(7, (time() - start), answer)
