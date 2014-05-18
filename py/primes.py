@@ -14,6 +14,11 @@ except ImportError:
                 return False
         return True
 
+try:
+    xrange
+except NameError:
+    xrange = range
+
 def primegen():
     yield 2
     i = 3
