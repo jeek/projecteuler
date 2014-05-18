@@ -10,6 +10,10 @@ try:
     reduce
 except:
     from functools import reduce
+try:
+    xrange
+except:
+    xrange = range
 
 def problem003(argument = 600851475143):
     """Return the maximum factor."""
