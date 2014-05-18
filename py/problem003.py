@@ -6,6 +6,10 @@ What is the largest prime factor of the number 600851475143 ?
 import unittest
 from time import time
 from factors import factors
+try:
+    reduce
+except:
+    from functools import reduce
 
 def problem003(argument = 600851475143):
     """Return the maximum factor."""
