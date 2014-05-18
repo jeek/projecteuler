@@ -4,10 +4,7 @@ clean:
 	rm -rf *.out *.pyc *~
 
 test:
-	python -munittest problem001 problem002 fibonacci factors problem003 \
-	    reverseint palindrome problem004 gcd problem005 primes problem006 \
-	    problem007 problem008 problem009 problem010 problem012 problem020 \
-	    problem021
+	ls *.py|sed "s/.py$//"|xargs python -munittest
 
 problem001.out: problem001.py
 	python problem001.py > problem001.out
