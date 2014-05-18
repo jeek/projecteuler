@@ -11,6 +11,10 @@ Evaluate the sum of all the amicable numbers under 10000.
 import unittest
 from amicable import isamicablepair
 from time import time
+try:
+    xrange
+except NameError:
+    xrange = range
 
 def problem021(argument = 10000):
     return sum(i for i in xrange(argument) if isamicablepair(i))
