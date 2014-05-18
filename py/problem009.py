@@ -9,7 +9,7 @@ Find the product abc."""
 import unittest
 try:
     unittest.TestCase.assertLess
-except NameError:
+except:
     def assertLess(self, a, b, msg=None):
         if not a < b:
             self.fail('%s not less than %s' % (repr(a), repr(b)))
