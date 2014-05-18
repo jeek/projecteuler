@@ -6,6 +6,13 @@ What is the 10 001st prime number?"""
 from primes import primegen
 from time import time
 import unittest
+try:
+    unittest.TestCase.assertLess
+except:
+    def assertLess(self, a, b, msg=None):
+        if not a < b:
+            self.fail('%s not less than %s' % (repr(a), repr(b)))
+    unittest.TestCase.assertLess = assertLess
 
 def problem007(argument = 10001):
     """Generate a list of primes and then return the last element."""

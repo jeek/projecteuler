@@ -8,6 +8,13 @@ By considering the terms in the Fibonacci sequence whose values do not
 exceed four million, find the sum of the even-valued terms.
 """
 import unittest
+try:
+    unittest.TestCase.assertLess
+except:
+    def assertLess(self, a, b, msg=None):
+        if not a < b:
+            self.fail('%s not less than %s' % (repr(a), repr(b)))
+    unittest.TestCase.assertLess = assertLess
 from time import time
 from fibonacci import fib_generator
 

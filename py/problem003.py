@@ -4,6 +4,13 @@ The prime factors of 13195 are 5, 7, 13 and 29.
 What is the largest prime factor of the number 600851475143 ?
 """
 import unittest
+try:
+    unittest.TestCase.assertLess
+except:
+    def assertLess(self, a, b, msg=None):
+        if not a < b:
+            self.fail('%s not less than %s' % (repr(a), repr(b)))
+    unittest.TestCase.assertLess = assertLess
 from time import time
 from factors import factors
 

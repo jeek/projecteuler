@@ -7,6 +7,13 @@ and the sum of the digits in the number 10! is 3 + 6 + 2 + 8 + 8 + 0 + 0 = 27.
 Find the sum of the digits in the number 100!
 """
 import unittest
+try:
+    unittest.TestCase.assertLess
+except:
+    def assertLess(self, a, b, msg=None):
+        if not a < b:
+            self.fail('%s not less than %s' % (repr(a), repr(b)))
+    unittest.TestCase.assertLess = assertLess
 from factorial import factorial
 from sumofdigits import sumofdigits
 from time import time
