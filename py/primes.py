@@ -1,6 +1,10 @@
 """Use gmpy prime checker if possible."""
 # pylint: disable=0611
 try:
+    xrange
+except NameError:
+    xrange = range
+try:
     from gmpy import is_prime
 except ImportError:
     def is_prime(argument):
